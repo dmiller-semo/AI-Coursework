@@ -1,0 +1,426 @@
+Of course. This is a great idea to showcase the graduate projects in a professional, accessible format. I will design a clean, modern, and easy-to-navigate website based on the provided file structure and the TN625 Graduate Project Proposals.
+
+The design will be professional and academic, suitable for a university department. I will create the HTML for the main page (index.html) and a separate page for the project details (projects.html), along with the corresponding CSS (style.css). I will also suggest appropriate open-source images.
+
+Step 1: Gather Images
+
+Before we start, let's select some placeholder images. You can download royalty-free images from sites like Pexels, Unsplash, or Pixabay. Search for terms like "network," "server room," "cybersecurity," "collaboration," and "code."
+
+For the header/banner (banner.jpg): A modern, abstract image representing technology or networking.
+
+For Project 1 (project1_onboarding.jpg): An image showing a user on a laptop with network diagrams or flowcharts in the background.
+
+For Project 2 (project2_wips.jpg): An image depicting a security operations center (SOC) dashboard or network alerts.
+
+For Project 3 (project3_wifi7.jpg): An image of a radio frequency spectrum analysis or a modern Wi-Fi access point.
+
+For Project 4 (project4_iot.jpg): An image showing various smart IoT devices (bulbs, cameras, sensors).
+
+Save these images in the images/ folder with the suggested filenames.
+
+Step 2: Create index.html (Main Page)
+
+This will be the landing page, introducing the program and providing a high-level overview of the projects.
+
+Generated html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TN625 Graduate Projects | SEMO Engineering & Technology</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>TN625: Graduate Projects in Wireless Security</h1>
+            <p>Department of Engineering and Technology | Southeast Missouri State University</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Project Details</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Fostering Innovation and Leadership in Wireless Security</h2>
+            <p>
+                The TN625 graduate program provides an unparalleled opportunity for students to move beyond theoretical knowledge and engage in real-world, hands-on research and development. These capstone projects challenge our graduate students to act as project managers, leading teams of their undergraduate peers to create novel solutions to complex wireless security problems.
+            </p>
+            <p>
+                Each project requires a comprehensive plan, including Gantt charts and clear role delegation, culminating in a final report and a formal presentation. This simulates the professional environment our students will enter, equipping them with both deep technical expertise and essential leadership skills.
+            </p>
+        </section>
+
+        <section id="project-overview">
+            <h2>Current Graduate Research Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/project1_onboarding.jpg" alt="Zero Trust Onboarding System">
+                    <h3>Project 1: The "Zero Trust" Wireless Onboarding System</h3>
+                    <p>Designing a fully automated, highly secure system for BYOD and corporate devices using advanced NAC and dynamic policies.</p>
+                    <a href="projects.html#project1" class="btn">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2_wips.jpg" alt="WIDS/WIPS Analysis Framework">
+                    <h3>Project 2: The WIDS/WIPS Comparative Analysis Framework</h3>
+                    <p>Creating a standardized framework to test and evaluate the effectiveness of commercial vs. open-source wireless intrusion prevention systems.</p>
+                    <a href="projects.html#project2" class="btn">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3_wifi7.jpg" alt="Wi-Fi 7 Testbed">
+                    <h3>Project 3: The Wi-Fi 7 Performance & Security Testbed</h3>
+                    <p>Building a functional testbed to measure the performance and analyze the new security considerations of Wi-Fi 7's Multi-Link Operation (MLO).</p>
+                    <a href="projects.html#project3" class="btn">Learn More</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/project4_iot.jpg" alt="IoT Secure Zone Architecture">
+                    <h3>Project 4: The "IoT Secure Zone" Network Architecture</h3>
+                    <p>Implementing a highly segmented network architecture to safely incorporate untrusted IoT devices into an enterprise environment.</p>
+                    <a href="projects.html#project4" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2024 Southeast Missouri State University - Department of Engineering and Technology</p>
+        <p>Instructor: David Miller | <a href="mailto:dmiller@semo.edu">dmiller@semo.edu</a></p>
+    </footer>
+
+</body>
+</html>
+
+Step 3: Create projects.html (Detailed Project Descriptions)
+
+This page will contain the full details for each project.
+
+Generated html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | TN625 Graduate Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>TN625: Detailed Project Proposals</h1>
+            <p>A Deep Dive into Graduate-Level Wireless Security Research</p>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Project Details</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <article class="project-detail" id="project1">
+            <h2>Project 1: The "Zero Trust" Wireless Onboarding System</h2>
+            <img src="images/project1_onboarding.jpg" alt="Zero Trust Onboarding System" class="project-banner">
+            <h3>Objective</h3>
+            <p>To design and build a fully automated, highly secure wireless onboarding system for a new corporate environment. The system will move beyond simple guest access and implement "Zero Trust" principles, where no device is trusted by default. The goal is to create a seamless, secure experience for both BYOD and corporate-owned devices.</p>
+            <h3>Core Technologies</h3>
+            <ul>
+                <li>hostapd & FreeRADIUS</li>
+                <li>Captive Portal Technology (Nodogsplash)</li>
+                <li>Certificate Authority (OpenSSL)</li>
+                <li>Automation Scripting (Python/Bash)</li>
+            </ul>
+            <h3>Project Manager Responsibilities</h3>
+            <p>The graduate student PM will architect the entire onboarding workflow, design the RADIUS policy logic for dynamic VLAN assignment, develop automation scripts, and oversee all integration and testing.</p>
+            <h3>Undergraduate Team Roles</h3>
+            <ul>
+                <li><strong>PKI Specialist:</strong> Manages the Certificate Authority and certificate lifecycle.</li>
+                <li><strong>Portal Developer:</strong> Customizes the captive portal and user-facing experience.</li>
+                <li><strong>Network Tester:</strong> Performs validation testing to ensure correct policy enforcement.</li>
+            </ul>
+        </article>
+
+        <article class="project-detail" id="project2">
+            <h2>Project 2: The WIDS/WIPS Comparative Analysis Framework</h2>
+            <img src="images/project2_wips.jpg" alt="WIDS/WIPS Analysis Framework" class="project-banner">
+            <h3>Objective</h3>
+            <p>To create and document a standardized framework for testing and evaluating the effectiveness of different Wireless Intrusion Detection/Prevention Systems (WIDS/WIPS). The project involves comparing a commercial solution (like Extreme Networks AirDefense) against a custom-built open-source solution.</p>
+            <h3>Core Technologies</h3>
+            <ul>
+                <li>ExtremeCloud IQ / AirDefense</li>
+                <li>Kali Linux Attack Suite (Aircrack-ng, bettercap)</li>
+                <li>Open-Source IDS (Kismet, Snort)</li>
+            </ul>
+            <h3>Project Manager Responsibilities</h3>
+            <p>The PM will design the "Test Case Matrix" defining all attacks and success metrics, lead the configuration of the complex open-source WIPS, and write the final data-driven comparative analysis report.</p>
+            <h3>Undergraduate Team Roles</h3>
+            <ul>
+                <li><strong>Red Team Attacker:</strong> Systematically executes all defined wireless attacks.</li>
+                <li><strong>Commercial WIPS Analyst:</strong> Monitors and documents the performance of the commercial solution.</li>
+                <li><strong>Open Source WIDS Analyst:</strong> Monitors and documents the performance of the custom-built solution.</li>
+            </ul>
+        </article>
+
+        <article class="project-detail" id="project3">
+            <h2>Project 3: The Wi-Fi 7 Performance & Security Testbed</h2>
+            <img src="images/project3_wifi7.jpg" alt="Wi-Fi 7 Testbed" class="project-banner">
+            <h3>Objective</h3>
+            <p>To build a functional testbed that can demonstrate and measure the key advantages and potential new security considerations of Wi-Fi 7 (802.11be), with a focus on Multi-Link Operation (MLO).</p>
+            <h3>Core Technologies</h3>
+            <ul>
+                <li>Linux `hostapd` with modern Wi-Fi 6/6E adapters</li>
+                <li>Performance Tools (`iperf3`, `ping`)</li>
+                <li>Packet Analysis (Wireshark)</li>
+                <li>Linux Network Bonding/Teaming</li>
+            </ul>
+            <h3>Project Manager Responsibilities</h3>
+            <p>The PM will architect the testbed, lead the effort to simulate MLO by bonding multiple network interfaces, design the performance experiments, and author a research paper on the findings and potential new MLO-related security vulnerabilities.</p>
+            <h3>Undergraduate Team Roles</h3>
+            <ul>
+                <li><strong>AP Configuration Specialist:</strong> Configures multi-band `hostapd` instances.</li>
+                <li><strong>Client & Performance Tester:</strong> Implements client-side interface bonding and runs all performance tests.</li>
+                <li><strong>Packet Analyst:</strong> Captures and analyzes traffic to verify MLO behavior.</li>
+            </ul>
+        </article>
+
+        <article class="project-detail" id="project4">
+            <h2>Project 4: The "IoT Secure Zone" Network Architecture</h2>
+            <img src="images/project4_iot.jpg" alt="IoT Secure Zone Architecture" class="project-banner">
+            <h3>Objective</h3>
+            <p>To design and implement a highly segmented network architecture specifically for insecure or untrusted Internet of Things (IoT) devices. The goal is to allow these devices to function while completely isolating them from the main corporate network and each other.</p>
+            <h3>Core Technologies</h3>
+            <ul>
+                <li>Enterprise-grade APs (Extreme Networks)</li>
+                <li>Network Access Control (NAC) / RADIUS</li>
+                <li>Firewall (Virtual or Physical)</li>
+                <li>Private Pre-Shared Keys (PPSK) or Client Isolation</li>
+            </ul>
+            <h3>Project Manager Responsibilities</h3>
+            <p>The PM will design the overall network architecture, including VLANs and firewall policies, research and select the best client isolation technology, and write a best-practice guide for securing IoT on enterprise Wi-Fi.</p>
+            <h3>Undergraduate Team Roles</h3>
+            <ul>
+                <li><strong>Wireless Configuration Specialist:</strong> Implements the chosen isolation technology on the APs.</li>
+                <li><strong>Firewall & Policy Admin:</strong> Configures strict firewall rules for the IoT VLAN.</li>
+                <li><strong>IoT & Penetration Tester:</strong> Onboards various IoT devices and attempts to bypass isolation controls.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer id="contact">
+        <p>© 2024 Southeast Missouri State University - Department of Engineering and Technology</p>
+        <p>Instructor: David Miller | <a href="mailto:dmiller@semo.edu">dmiller@semo.edu</a></p>
+    </footer>
+
+</body>
+</html>
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Html
+IGNORE_WHEN_COPYING_END
+Step 4: Create style.css (The Design)
+
+This CSS provides a clean, professional, academic look and feel.
+
+Generated css
+/* General Body & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+    color: #2c3e50;
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('images/banner.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #34495e;
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: #1abc9c;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    background: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Project Overview Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: #ecf0f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.project-card p {
+    padding: 0 1.5rem;
+    flex-grow: 1; /* Makes sure cards in a row have same height */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #16a085;
+}
+
+/* Project Detail Page */
+.project-detail {
+    background: #ffffff;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-banner {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.project-detail h3 {
+    color: #34495e;
+    border-left: 4px solid #1abc9c;
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.project-detail ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+IGNORE_WHEN_COPYING_START
+content_copy
+download
+Use code with caution.
+Css
+IGNORE_WHEN_COPYING_END
+Final Step: Put It All Together
+
+Create the your-project/ directory.
+
+Inside it, create index.html, projects.html, and style.css.
+
+Create the images/ sub-directory.
+
+Copy the code into the respective files.
+
+Download your chosen images and place them in the images/ folder, ensuring the filenames match the ones used in the HTML <img> tags.
+
+Open index.html in your web browser to view the site.
