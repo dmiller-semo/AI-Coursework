@@ -1,0 +1,180 @@
+/* --- FILE: style.css --- */
+
+/* General Body & Typography */
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F0F2F5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header Styling */
+.header {
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0078D4;
+    padding-bottom: 10px;
+}
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #004578;
+    margin: 0;
+}
+.header p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0 0 0;
+}
+
+/* Main Menu (index.html) Styling */
+.deck-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+}
+.deck-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #333;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+.deck-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 120, 212, 0.2);
+}
+.deck-card h2 {
+    font-size: 22px;
+    color: #0078D4;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.deck-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Flashcard (deck_*.html) Styling */
+.flashcard-container {
+    width: 100%;
+    max-width: 800px;
+    perspective: 1200px;
+    margin-bottom: 20px;
+}
+.flashcard {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    cursor: pointer;
+}
+.flashcard.is-flipped {
+    transform: rotateY(180deg);
+}
+.flashcard-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    background: #fff;
+    border: 1px solid #E1E1E1;
+}
+.flashcard-back {
+    transform: rotateY(180deg);
+    background: #F5F9FC;
+    border: 1px solid #0078D4;
+}
+.card-image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card-content-wrapper {
+    padding: 20px 25px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-type {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0078D4;
+    margin-bottom: 10px;
+}
+.card-content-question {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.card-content-answer {
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: left;
+}
+.card-content-answer strong {
+    color: #004578;
+}
+.card-content-answer ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+/* Navigation Controls */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 10px;
+}
+.nav-button {
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.nav-button:hover {
+    background-color: #004578;
+}
+.nav-button.back-to-menu {
+    background-color: #6c757d;
+}
+.nav-button.back-to-menu:hover {
+    background-color: #5a6268;
+}
+#card-counter {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
